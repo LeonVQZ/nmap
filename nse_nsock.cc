@@ -773,7 +773,7 @@ static int l_set_timeout (lua_State *L)
   if (timeout < -1) /* -1 is no timeout */
     return luaL_error(L, "Negative timeout: %f", timeout);
   if (timeout > 500)
-    timeout = 500
+    timeout = 500;
   nu->timeout = timeout;
   return nseU_success(L);
 }
